@@ -41,11 +41,11 @@ jobs:
       uses: NuGet/setup-nuget@v1.1.1
 
     - name: Restore NuGet Packages
-      run: nuget restore ${{ github.workspace }}\SweetPotato.sln
+      run: nuget restore ${{ github.workspace }}\BadPotato.sln
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild ${{ github.workspace }}\SweetPotato.csproj
+      run: msbuild ${{ github.workspace }}\BadPotato.csproj
       env:
         Configuration: ${{ matrix.configuration }}
 
